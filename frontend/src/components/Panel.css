@@ -3,7 +3,6 @@
     color: white;
 }
 
-
 .client-section {
     flex-basis: 25%;
     height: 100vh;
@@ -62,38 +61,24 @@ input[type="date"]:focus {
     gap: 0.8em;
 }
 
-.btn-wrapper {
+.date-container .btn-wrapper {
     width: 100%;
 }
 
-.update-btn,
-.reset-btn {
+.date-container .btn-wrapper button {
     cursor: pointer;
     width: 100%;
     padding: 0.7em 1em;
     transition: 0.1s ease-in-out;
 }
 
-.update-btn:hover{
-    background-color: var(--color-light-green);
+.date-container .btn-wrapper button{
+    margin-top: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    transition: 0.2s ease;
+    border: none;
 }
-
-.reset-btn:hover{
-    border: solid 1px var(--color-light-green);
-    color: var(--color-light-green);
-}
-
-.update-btn {
-    background-color: var(--color-main-green);
-    color: white;
-}
-
-.reset-btn {
-    background-color: white;
-    color: var(--color-main-green);
-    border: solid 1px var(--color-main-green);
-}
-
 
 /* Columm 2 */
 .selection-container-list {
@@ -125,14 +110,15 @@ input[type="date"]:focus {
     font-size: 1em;
 }
 
-.button-section button {
+.button-section button{
     background-color: unset;
     color: white;
     transition: 0.2s ease;
     border: none;
 }
 
-.button-section button:hover {
+.button-section button:hover,
+.btn-wrapper button:hover {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 

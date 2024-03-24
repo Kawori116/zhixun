@@ -41,6 +41,7 @@
   height: 50px;
   border: 1.5px solid #ecedec;
   border-radius: 10px;
+  background-color: var(--color-white);
 }
 
 .form .form-input:focus-within {
