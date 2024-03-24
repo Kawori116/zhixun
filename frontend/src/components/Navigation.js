@@ -10,6 +10,9 @@ const Navigation = () => {
       <div>
         <Link to="/map">Map</Link>
       </div>
+      <div>
+        <Link to="/client">Client</Link>
+      </div>
     </main>
   );
 };

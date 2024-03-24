@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './components/Login';
 import Home from './components/Home';
 import MapPage from './components/MapPage';
+import ClientPage from './components/ClientPage';
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route path="/map">
             <MapPage />
+          </Route>
+          <Route path="/client">
+            <ClientPage />
           </Route>
         </Switch>
     </Router>

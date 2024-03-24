@@ -97,6 +97,15 @@ td {
   border: 1px solid #ddd;
 }
 
+table th {
+  background: var(--color-main-green);
+  color: var(--color-white);
+}
+
+table td {
+  background: var(--color-white);
+}
+
 p,
 h1,
 h2,
