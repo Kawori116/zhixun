@@ -60,22 +60,7 @@ const Panel = ({ selectedClient, selectedDeviceData, setSelectedDeviceData, devi
     return (
         <div className="client-section">
           <div className="col">
-            <h3 className="client-name">{selectedClient}</h3>
-            <div className="date-container">
-              <div className="date-wrap">
-                <input type="date" />
-              </div>
-              <div className="btn-container">
-                <div className="btn-wrapper">
-                  <button className="update-btn"><p>更新</p></button>
-                </div>
-                <div className="btn-wrapper">
-                  <button className="reset-btn"><p>復歸</p></button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col">
+          <h3 className="client-name">{selectedClient}</h3>
           <div className="button-section">
             <ul className="selection-container-list">
                 {deviceList.map((device, index) => (
@@ -86,6 +71,22 @@ const Panel = ({ selectedClient, selectedDeviceData, setSelectedDeviceData, devi
             </ul>
           </div>
         </div>
+        <div className="col">
+            <div className="date-container">
+              <div className="date-wrap">
+                <input type="date" />
+              </div>
+              <div className="btn-container">
+                <div className="btn-wrapper">
+                {selectedDeviceData && selectedDeviceData.button && selectedDeviceData.button.map((item, index) => (
+                    <button key={index} className='action-btn'
+                    style={{ backgroundColor: item.color === 'ok' ? '#ffffff' : item.color,
+                    color: item.color === 'ok' ? 'inherit' : '#ffffff' }}>{item.text}</button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         {selectedDeviceData && (
         <div className="col">
           <div className="button-section">
